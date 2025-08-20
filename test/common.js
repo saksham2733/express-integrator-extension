@@ -1,4 +1,4 @@
-var logger = require('winston')
+const { logger } = require('@celigo/logger')
 
 var consoleTransportOpts = {
   colorize: true,
@@ -6,5 +6,4 @@ var consoleTransportOpts = {
   prettyPrint: true
 }
 
-logger.remove(logger.transports.Console)
-logger.add(logger.transports.Console, consoleTransportOpts)
+// @celigo/logger already configures console output; adjust level/format if needed
