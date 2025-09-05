@@ -1,10 +1,4 @@
-var logger = require('winston')
+const { makeLogger } = require('../lib/logger')
+const logger = makeLogger('info')
 
-var consoleTransportOpts = {
-  colorize: true,
-  timestamp: true,
-  prettyPrint: true
-}
-
-logger.remove(logger.transports.Console)
-logger.add(logger.transports.Console, consoleTransportOpts)
+module.exports = { logger }
